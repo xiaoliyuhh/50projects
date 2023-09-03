@@ -1,0 +1,34 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* 在横轴上居中对齐 */
+    align-items: center;
+    /* 在纵轴上居中对齐 */
+    align-content: center;
+}
+
+.container {
+    display: flex;
+}
+
+.image {
+    height: 500px;
+    width: 150px;
+    position: relative;
+    transition: width 2s ease-in;
+}
+
+/* .image:hover {
+    width: 500px;
+} */
+.image.active {
+    width: 500px;
+}
+
+.image h3 {
+    position: absolute;
+    color: white;
+    left: 20px;
+    bottom: 10px;
+}
