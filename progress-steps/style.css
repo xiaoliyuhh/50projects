@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    /* 主轴对其方式 */
+    justify-content: center;
+    /* 交叉轴对齐方式 */
+    align-items: center;
+    /* align-content: center; */
+}
+
+.containner {
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.containner .progress-containner {
+    width: 80vw;
+}
+
+.containner .circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    line-height: 50px;
+}
+
+.containner .circle::after {
+    content: '';
+    display: inline-block;
+    width: 60px;
+    vertical-align: middle;
+    /* 让引导线和文本垂直居中 */
+    border-bottom: 1px solid #ccc;
+}
+
+.containner .circle.active {
+    border: 2px solid skyblue;
+}
+
+
+button {
+    width: 50px;
+    height: 40px;
+    margin: 20px;
+}
