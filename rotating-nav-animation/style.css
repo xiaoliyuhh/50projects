@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* position: relative; */
+    background-color: gray;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    background-color: white;
+    /* 变换中心 */
+    transform-origin: top left;
+    transition: transform 2s;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.nav-position {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.nav {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: pink;
+    transform: transform 0.2s linear;
+}
+
+.container.show-nav .nav {
+    transform: rotate(-70deg);
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px 0;
+    padding: 20px 100px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background-color: transparent;
+    border: 0;
+}
+
+
+
+.nav #open {
+    left: 60%;
+}
+
+
+.nav #close {
+    left: 60%;
+    transform-origin: top left;
+    transform: rotate(90deg);
+}
+
+
+nav {
+    /* 相对于浏览器窗口的位置而不是第一个父元素 */
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+.container.show-nav+nav li {
+    transform: rotate(0);
+    transition-delay: 0.3s;
+}
+
+li {
+    margin: 40px 0;
+    color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+
+li+li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+li+li+li {
+    margin-left: 20px;
+    transform: translateX(-200%);
+}
