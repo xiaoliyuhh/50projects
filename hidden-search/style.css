@@ -8,25 +8,44 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    margin: 0;
 }
 
 .search {
-    display: flex;
+    position: relative;
 }
 
 input {
-    display: inline-block;
+    position: absolute;
     height: 50px;
-    width: 150px;
+    width: 50px;
+    padding: 15px;
     background-color: aliceblue;
     border: 0;
+    transition: width 0.2s ease;
+
+}
+
+.search.active input {
+    width: 200px;
 }
 
 .btn {
-    top: 0;
-    right: 0;
+    position: absolute;
     height: 50px;
     width: 50px;
     background-color: aliceblue;
     border: 0;
+    transition: transform 0.2s ease;
+}
+
+.search.active .btn {
+    transform: translateX(200px);
+}
+
+/* input和button在点击获得焦点时会有一个默认样式，会显示一个轮廓 */
+input:focus,
+.btn:focus {
+    outline: none;
 }
