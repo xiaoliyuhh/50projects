@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #7d5fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+}
+
+input {
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    background-color: aliceblue;
+    border: 0;
+}
+
+.btn {
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    background-color: aliceblue;
+    border: 0;
+}
