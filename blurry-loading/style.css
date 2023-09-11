@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./v2-c3c8204b9dae03e37f374e14d9bcefe3_r.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
