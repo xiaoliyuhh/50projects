@@ -48,6 +48,23 @@ h1 {
     background-image: url(xbox.jpg);
 }
 
+/* 遮罩层，如果用opacity会导致文字和按钮也变暗 */
+.box.left::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(87, 84, 236, 0.7);
+}
+
+.box.right::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(43, 43, 43, 0.8);
+}
+
 .hover-left .left {
     width: 75%;
 }
@@ -67,7 +84,7 @@ h1 {
 /* 把transition写在这里而不是上面的width后面才能顺畅衔接 */
 .left,
 .right {
-    transition: all 0.2s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .btn {
