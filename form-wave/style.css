@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: steelblue;
+    margin: 0;
+    height: 100vh;
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    position: relative;
+    margin: 40px 0;
+    width: 300px;
+}
+
+.form-control input {
+    color: #fff;
+    width: 100%;
+    padding: 15px 0;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.form-control label {
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    border-radius: 3px;
+    background-color: lightblue;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+
+
+.btn:focus,
+input {
+    outline: none;
+}
+
+.text a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.form-control label span {
+    /* 要将行内元素span转成行内块元素才能使用transition属性 */
+    display: inline-block;
+    font-size: 18px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    transform: translateY(-30px);
+    color: lightblue;
+}
