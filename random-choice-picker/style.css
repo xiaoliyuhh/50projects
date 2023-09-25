@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #3392f7;
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    width: 500px;
+
+}
+
+.content {
+    width: 500px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.container {
+    width: 500px;
+    margin-top: 20px;
+    display: inline-flex;
+}
+
+
+.container .box {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgb(232, 134, 43);
+    margin: 10px;
+}
+
+.container .box:nth-child(1) {
+    margin-left: 0;
+}
