@@ -12,6 +12,23 @@ textarea.addEventListener('keyup', (event) => {
     })
     if (event.key === 'Enter') {
         event.target.value = ''
+        randomSelect()
     }
 })
+function randomSelect() {
+    const interval = setInterval(() => {
+        const spans = document.querySelectorAll('.box')
+        const randomSpan = spans[Math.floor(Math.random() * spans.length)]
+        if (randomSpan !== undefined) {
+            randomSpan.classList.add('highlight')
+        }
+        setTimeout(() => {
+            randomSpan.classList.remove('highlight')
+        }, 100)
+        clearTimeout(timeOut)
+    }, 100)
+    setTimeout(() => {
+        clearInterval(interval)
+    }, 3000)
+}
 

@@ -36,9 +36,14 @@ h3 {
 .container .box {
     padding: 10px 20px;
     border-radius: 20px;
-    background-color: rgb(232, 134, 43);
+    background-color: #f0932b;
     margin: 10px;
 }
+
+.container .box.highlight {
+    background-color: #273c75;
+}
+
 
 .container .box:nth-child(1) {
     margin-left: 0;
