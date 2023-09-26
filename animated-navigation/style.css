@@ -17,18 +17,24 @@ body {
 
 .navigation {
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80px;
     height: 60px;
     transition: width 0.6s linear;
 }
 
 .navigation.active {
-    width: 500px;
+    width: 400px;
 
 }
 
 a {
+    position: relative;
+    color: #000;
     text-decoration: none;
+    margin: 0 10px;
 }
 
 .navigation ul {
@@ -47,7 +53,7 @@ a {
 .navigation ul li {
     transform: rotateY(0deg);
     margin-right: 20px;
-    /* opacity: 0; */
+    opacity: 0;
     transition: transform 0.6s linear, opacity 0.6s linear;
 }
 
@@ -57,9 +63,10 @@ a {
 }
 
 .icon {
-    width: 60px;
-    height: 60px;
-    /* border: 0; */
+    width: 40px;
+    height: 30px;
+    padding: 0;
+    border: 0;
     background-color: transparent;
     position: relative;
 
@@ -68,11 +75,18 @@ a {
 .icon .line {
     background-color: green;
     height: 2px;
+    width: 20px;
     position: absolute;
     top: 10px;
-    left: 5px;
-
+    left: 8px;
+    transition: transform 0.6s linear;
 }
+
+.icon .line2 {
+    top: auto;
+    bottom: 10px;
+}
+
 
 .navigation.active .icon .line1 {
     transform: rotate(-765deg) translateY(5.5px);
@@ -80,10 +94,4 @@ a {
 
 .navigation.active .icon .line2 {
     transform: rotate(765deg) translateY(-5.5px);
-}
-
-.icon .line1 {
-    position: absolute;
-    top: 10px;
-    transform: ;
 }
