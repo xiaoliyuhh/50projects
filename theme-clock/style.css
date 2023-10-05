@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.container {
+    width: 300px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.title {
+
+    padding: 5px;
+    color: #fff;
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+.clock .hour {
+    height: 5px;
+    width: 60px;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -2.5px;
+    border-radius: 2px;
+    transform-origin: 0px 2.5px;
+}
+
+.clock .minute {
+    height: 4px;
+    width: 100px;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -2px;
+    border-radius: 2px;
+    transform-origin: 0px 2px;
+}
+
+.clock .second {
+    height: 2px;
+    width: 130px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -3px;
+    border-radius: 1px;
+    transform-origin: 0px 1px;
+    transform: rotate(30deg);
+}
+
+.clock .circle {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -5px;
+    border: 3px red solid;
+    border-radius: 50%;
+}
+
+.time {
+    padding: 10px;
+    font-size: 50px;
+    font-weight: 340;
+    margin: auto;
+}
+
+.date {
+    color: gray;
+    font-size: 14px;
+}
+
+.date span {
+    display: inline-block;
+    margin: 0 10px;
+    height: 20px;
+    width: 20px;
+    background-color: #000;
+    border-radius: 50% 50%;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-size: 8px;
+}
