@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.btn {
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: blueviolet;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn .ndiv {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #fff;
+    border-radius: 50%;
+    /* 动画 */
+    animation: scale 0.5s ease-out;
+
+}
+
+.btn:focus {
+    outline: none;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
