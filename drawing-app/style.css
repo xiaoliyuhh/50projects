@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#canvas {
+    border: 2px solid rgb(23, 132, 216);
+}
+
+.toolbox {
+    width: 800px;
+    padding: 20px;
+    display: flex;
+    background-color: rgb(44, 107, 155);
+    border: 2px solid rgb(44, 107, 155);
+}
+
+.toolbox>* {
+    /* 在行内元素使用flex布局 */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    font-size: 2rem;
+    margin: 0.25rem;
+    padding: 0.25rem;
+}
+
+
+.toolbox>*:last-child {
+    margin-left: auto;
+}
