@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pic {
+    width: 350px;
+    height: 200px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.text {
+    margin: 10px 20px 0 20px;
+}
+
+.buttom {
+    padding: 0 20px 20px;
+}
+
+.buttom .left {
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+
+
+.buttom .right {
+    display: inline-block;
+    margin-left: 20px;
+    width: 100px;
+}
+
+.animated-text {
+    border-radius: 50px;
+    display: inline-block;
+    height: 10px;
+    width: 100%;
+}
+
+
+.date {
+    font-size: 14px;
+    color: gray;
+}
+
+
+/* 刚开始的刷新效果 */
+.animated-bg {
+    background-image: linear-gradient(to right,
+            #f6f7f8 0%,
+            #edeef1 10%,
+            #f6f7f8 20%,
+            #f6f7f8 100%);
+    /* 使背景图像在水平方向上重复显示，形成一种平铺（tiling）的效果。
+            考虑到 linear-gradient 是一个渐变，而不是一个图像，通过设置 background-size 为 200% 100%，可以使整个渐变范围在水平方向上重复两次。
+            这样，当动画使背景图像在水平方向上移动时，它实际上是在两个相同的渐变范围之间切换，从而创造出了一种平滑的平移效果。
+             */
+    background-size: 200% 100%;
+    animation: bgPos 1s linear infinite;
+}
+
+@keyframes bgPos {
+
+    /* 在动画的开始（0%），background-position 被设置为 50% 0。这意味着背景图片在水平方向上居中，而在垂直方向上与元素的顶部对齐。这是动画的初始状态，也就是背景图像开始的位置。 */
+    0% {
+        background-position: 50% 0;
+    }
+
+    /* 由于 background-size 设置为 200% 100%，背景图片在水平方向上的范围是整个元素的两倍宽度。因此，在动画的结束状态，背景图像的左侧会超出元素的左侧，产生一种平移的效果。 */
+    100% {
+        background-position: -150% 0;
+    }
+}
