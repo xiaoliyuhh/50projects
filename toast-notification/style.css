@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: rgb(127, 72, 179);
+    position: relative;
+}
+
+.btn {
+    color: rgb(127, 72, 179);
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.msgBox {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.msg {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}
