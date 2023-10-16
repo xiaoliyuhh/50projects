@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin: 5px;
+}
+
+.pic {
+    margin: 20px;
+    height: 500px;
+    width: 400px;
+    background-image: url(/images/v2-886e2dba494fff222a393afb11e51e04_r.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.pic .fa-heart {
+    position: absolute;
+    animation: grow 0.6s linear;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow {
+    to {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}
