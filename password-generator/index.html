@@ -5,33 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="card">
         <h2>Password Generator</h2>
-        <div class="show"><span class="icon fas"></span></div>
+        <div class="show">
+            <span class="result"></span>
+            <button class="icon">
+                <i class="far fa-clipboard"></i>
+            </button>
+        </div>
         <div class="select">
             <div class="length">
                 <label for="len">Password Length</label>
-                <input type="number" id="len">
+                <input type="number" id="len" value="20">
             </div>
             <div class="uppercase">
                 <label for="upper">Include uppercase letters</label>
-                <input type="checkbox" id="upper">
+                <input type="checkbox" id="upper" checked>
             </div>
             <div class="lowercase">
                 <label for="lower">Include lowercase letters</label>
-                <input type="checkbox" id="lower">
+                <input type="checkbox" id="lower" checked>
             </div>
             <div class="numbers">
                 <label for="num">Include numbers</label>
-                <input type="checkbox" id="num">
+                <input type="checkbox" id="num" checked>
             </div>
             <div class="symbols">
                 <label for="sym">Include symbols</label>
-                <input type="checkbox" id="sym">
+                <input type="checkbox" id="sym" checked>
             </div>
         </div>
         <button class="btn">Generate Password</button>

@@ -27,16 +27,29 @@ body {
     height: 50px;
     background-color: rgba(0, 0, 0, 0.4);
     margin-bottom: 10px;
-    padding: 5px;
     position: relative;
+
 }
 
-.icon {
+.show .icon {
     position: absolute;
     right: 5px;
+    top: 5px;
     width: 40px;
     height: 40px;
     background-color: rgb(64, 59, 154);
+    color: #fff;
+}
+
+.show .result {
+    display: inline-block;
+    height: 100%;
+    line-height: 50px;
+    vertical-align: middle;
+    word-wrap: break-word;
+
+    max-width: calc(100% - 50px);
+    overflow-y: auto;
 }
 
 .select>div {
