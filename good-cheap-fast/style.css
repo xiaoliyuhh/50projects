@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    width: 200px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.box {
+    height: 50px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.toggle {
+    visibility: hidden;
+}
+
+span {
+    line-height: 50px;
+}
+
+.btn {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 25px;
+    border: 0;
+    position: relative;
+    background-color: rgb(207, 207, 207);
+
+}
+
+/* :checked表示选中时元素  +选择器表示的是紧接其后的选择器 */
+.toggle:checked+.btn {
+    background-color: blueviolet;
+}
+
+.circle {
+    height: 40px;
+    width: 40px;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: slideOff 0.3s linear forwards;
+}
+
+
+.toggle:checked+.btn .circle {
+    animation: slideOn 0.3s linear forwards;
+}
+
+@keyframes slideOn {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+
+    50% {
+        transform: translateX(25px) scale(1.2);
+    }
+
+    100% {
+        transform: translateX(50px) scale(1);
+    }
+
+}
+
+@keyframes slideOff {
+    0% {
+        transform: translateX(50px) scale(1);
+    }
+
+    50% {
+        transform: translateX(25px) scale(1.2);
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
