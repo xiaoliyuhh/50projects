@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.start,
+.sleep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.count {
+    color: rgb(7, 162, 228);
+    font-size: 40px;
+    height: 50px;
+    width: 250px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.count span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* span相对父容器count旋转，旋转中心是下边框中点 */
+    transform: translate(-50%, -50%) rotate(130deg);
+    transform-origin: bottom center;
+}
+
+.count span.in {
+    transform: translate(-50%, -50%) rotate(120deg);
+    animation: goIn 0.5s ease-in-out;
+}
+
+.count span.out {
+    animation: goOut 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes goIn {
+
+    /* 所有的都要带translate，因为会替换span的transform */
+    0% {
+        transform: translate(-50%, -50%) rotate(130deg);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) rotate(-20deg);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes goOut {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(20deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-100deg);
+    }
+}
