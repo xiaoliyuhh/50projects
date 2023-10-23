@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: rgb(37, 37, 37);
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 400px;
+}
+
+.cell {
+    height: 16px;
+    width: 16px;
+    margin: 2px;
+    background-color: #3e3c3c;
+    /* 过渡效果 */
+    transition: 2s ease;
+}
+
+/* 鼠标悬停的时候没有过渡效果 */
+.cell:hover {
+    transition-duration: 0s;
+}
