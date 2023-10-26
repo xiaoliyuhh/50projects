@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(194, 154, 232);
+}
+
+.phone {
+    overflow: hidden;
+    border: 3px solid #eee;
+    border-radius: 15px;
+    height: 600px;
+    width: 340px;
+    position: relative;
+}
+
+.phone .content {
+    opacity: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 60px);
+    width: 100%;
+    transition: opacity 0.4s ease;
+}
+
+.phone .content.show {
+    opacity: 1;
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: -5px;
+    width: 100%;
+
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+ul li {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    color: gray;
+}
+
+p {
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+li:hover,
+li.active {
+    color: blueviolet;
+}
